@@ -15,6 +15,35 @@ Site estático do **Whatss** (API Oficial WhatsApp Business — Moçambique & Br
 - **Email:** info@hlces.com
 - **WhatsApp:** +258 82 446 3475 → [wa.me/258824463475](https://wa.me/258824463475)
 
+## Deploy no Coolify (VPS — `whatss.mycloudspaces.com`)
+
+### Pré-requisitos
+
+- DNS: `whatss.mycloudspaces.com` → `144.91.110.199` (A record — já configurado)
+- Repositório `Importmoz/whatss-site` com o código atualizado (push feito)
+
+### Passo a passo (painel Coolify)
+
+1. **Push** do código para o GitHub (se ainda não foi feito):
+   ```bash
+   git push origin main
+   ```
+2. No Coolify (`https://mycloudspaces.com`) → **Projects** → **+ New Project** (ou usa um existente) → **+ New Resource**.
+3. Escolhe **Private Repository** → seleciona `Importmoz/whatss-site` (branch `main`).
+4. **Build Pack:** `Dockerfile` (o Dockerfile do repo usa nginx e já trata o 404).
+5. **Domains:** adiciona `https://whatss.mycloudspaces.com`.
+6. **Deploy** — o Coolify faz o build, publica e emite o SSL automático (Let's Encrypt) em ~1 min.
+
+> Alternativa (sem Dockerfile): Build Pack `Static` → Build Command vazio → Publish Directory `/`.
+
+### Verificação
+
+```bash
+curl -s -o /dev/null -w "%{http_code}" https://whatss.mycloudspaces.com/   # esperado: 200
+curl -s -o /dev/null -w "%{http_code}" https://whatss.mycloudspaces.com/termos.html   # 200
+curl -s -o /dev/null -w "%{http_code}" https://whatss.mycloudspaces.com/nao-existe   # 404 (página custom)
+```
+
 ## Deploy no Cloudflare Pages
 
 ### Opção A — Conectar repositório GitHub (recomendado, deploys automáticos)
