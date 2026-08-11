@@ -1,6 +1,6 @@
-# Whatss — Landing Page + Termos & Privacidade
+# Whatss — Sistemas de Gestão Sob Medida
 
-Site estático do **Whatss** (API Oficial WhatsApp Business — Moçambique & Brasil), pronto para hospedar no **Cloudflare Pages**.
+Site estático do **Whatss** (criação de sistemas de gestão sob medida — planejamento, desenvolvimento, testes, hospedagem, manutenção e melhorias contínuas; Moçambique & Brasil), pronto para hospedar no **Cloudflare Pages**.
 
 ## Estrutura
 
