@@ -1,6 +1,8 @@
 # Whatss — Sistemas de Gestão Sob Medida
 
-Site estático do **Whatss** (criação de sistemas de gestão sob medida — planejamento, desenvolvimento, testes, hospedagem, manutenção e melhorias contínuas; Moçambique & Brasil), pronto para hospedar no **Cloudflare Pages**.
+Site estático do **Whatss** (criação de sistemas de gestão sob medida — planejamento, desenvolvimento, testes, hospedagem, domínio personalizado, manutenção e melhorias contínuas; Moçambique & mundo), pronto para hospedar no **Cloudflare Pages**.
+
+**Design actual:** landing com secções O que Fazemos / Quem Somos / Serviços completos (Discovery→Integração) / Processo em 6 etapas / Tipos de sistemas / Investimento ($245 custo único + $100/mês) / CTA. Termos & Privacidade abrem em modal na própria página; link Reembolso no rodapé aponta para `reembolso.html`.
 
 ## Estrutura
 
