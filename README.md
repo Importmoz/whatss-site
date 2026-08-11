@@ -5,13 +5,18 @@ Site estático do **Whatss** (API Oficial WhatsApp Business — Moçambique & Br
 ## Estrutura
 
 ```
-├── index.html      → Landing page (página inicial)
-├── termos.html     → Termos de Serviço + Política de Privacidade (com abas)
-├── reembolso.html  → Política de Reembolso
-├── 404.html        → Página de erro 404 com link para a home
+├── index.html      → Landing page (página inicial) — PT
+├── termos.html     → Termos de Serviço + Política de Privacidade (com abas) — PT
+├── reembolso.html  → Política de Reembolso — PT
+├── 404.html        → Página de erro 404 — PT
+├── en/             → Versão em inglês (index, termos, reembolso, 404)
 ├── Dockerfile      → nginx:alpine (deploy Coolify)
 └── nginx.conf      → config nginx (404 custom)
 ```
+
+## Versão em inglês
+
+O site tem versão **PT** (raiz) e **EN** (`/en/`). O selector de idioma está no cabeçalho e rodapé de cada página (PT → "EN"/"English", EN → "Português"/"PT").
 
 ## Contactos
 
@@ -73,6 +78,7 @@ curl -s -o /dev/null -w "%{http_code}" https://whatss.mycloudspaces.com/nao-exis
 | Landing (rodapé) | Termos | `termos.html` |
 | Landing (rodapé) | Privacidade | `termos.html` |
 | Landing (rodapé) | Reembolso | `reembolso.html` |
+| Landing (rodapé) | Versão EN | `en/index.html` |
 | Termos (rodapé) | Reembolso | `reembolso.html` |
 | Reembolso (rodapé) | Termos | `termos.html` |
 | Reembolso (rodapé) | Privacidade | `termos.html` |

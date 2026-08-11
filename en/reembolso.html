@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Reembolso — Whatss</title>
+  <title>Refund Policy — Whatss</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -40,11 +40,17 @@
       background: linear-gradient(90deg, #10b981, #3b82f6);
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
+    .header-links { display: flex; align-items: center; gap: 16px; }
     .back-link {
       font-size: 13px; font-weight: 500; color: #71717a;
       text-decoration: none; transition: color 0.2s;
     }
     .back-link:hover { color: #18181b; }
+    .lang-link {
+      font-size: 13px; font-weight: 700; color: #18181b;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .lang-link:hover { color: #059669; }
     @media (max-width: 640px) { .back-link { display: none; } }
     /* ── Main ── */
     main { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; animation: fadeUp 0.5s ease both; }
@@ -162,131 +168,132 @@
         <span class="brand-logo">W</span>
         <span class="brand-name">Whatss</span>
       </a>
-      <a class="back-link" href="index.html">Voltar para Home →</a>
-      <a class="back-link" href="en/reembolso.html" style="font-weight:700;color:#18181b;margin-left:4px;">English</a>
+      <div class="header-links">
+        <a class="lang-link" href="../reembolso.html">Português</a>
+        <a class="back-link" href="index.html">Back to Home →</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <span class="badge">Política de Reembolso</span>
-    <h1>Reembolso: condições claras, sem letras pequenas.</h1>
+    <span class="badge">Refund Policy</span>
+    <h1>Refunds: clear conditions, no fine print.</h1>
     <p class="subtitle">
-      O Whatss é a API oficial do WhatsApp Business para empresas em Moçambique e no Brasil.
-      Esta política define quando e como os valores pagos podem ser devolvidos.
+      Whatss is the official WhatsApp Business API for businesses in Mozambique and Brazil.
+      This policy defines when and how paid amounts can be refunded.
     </p>
-    <span class="updated">Última atualização: 10 de agosto de 2026</span>
+    <span class="updated">Last updated: August 10, 2026</span>
 
     <div class="callout">
-      <h2>⚡ Resumo rápido</h2>
+      <h2>⚡ Quick summary</h2>
       <p>
-        Cobranças <strong>duplicadas ou por engano</strong> são sempre reembolsadas por inteiro. A taxa de
-        implementação é reembolsável <strong>se cancelares antes do início dos trabalhos</strong>. Mensalidades
-        e créditos de conversa não são reembolsáveis após a ativação, salvo falha contínua do serviço
-        imputável à Whatss.
+        <strong>Duplicate or mistaken charges</strong> are always fully refunded. The implementation fee is
+        refundable <strong>if you cancel before work begins</strong>. Monthly fees and conversation credits are
+        not refundable after activation, except in cases of ongoing service failure attributable to Whatss.
       </p>
     </div>
 
     <section class="card">
-      <h2><span class="num">1</span> A que serviços se aplica</h2>
+      <h2><span class="num">1</span> What services this applies to</h2>
       <p>
-        Esta política cobre todos os pagamentos feitos à <strong>HLCES</strong> pelos serviços Whatss:
-        implementação da API oficial do WhatsApp Business, mensalidades de gestão e suporte, e créditos
-        de conversa (mensagens enviadas através da API).
+        This policy covers all payments made to <strong>HLCES</strong> for Whatss services: implementation of the
+        official WhatsApp Business API, monthly management and support fees, and conversation credits (messages
+        sent through the API).
       </p>
     </section>
 
     <section class="card">
-      <h2><span class="num">2</span> Taxa de implementação (setup)</h2>
+      <h2><span class="num">2</span> Implementation fee (setup)</h2>
       <ul>
-        <li>É paga <strong>uma única vez</strong>, antes do início da configuração da conta.</li>
-        <li>É <strong>integralmente reembolsável</strong> se pedires o cancelamento antes de os trabalhos de implementação começarem.</li>
-        <li>Não é reembolsável após o início da implementação, pois envolve trabalho técnico já realizado (configuração da conta, verificação, integração).</li>
+        <li>Paid <strong>once</strong>, before the setup of your account begins.</li>
+        <li><strong>Fully refundable</strong> if you cancel before implementation work starts.</li>
+        <li>Not refundable after implementation begins, as it involves technical work already performed (account setup, verification, integration).</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2><span class="num">3</span> Mensalidades</h2>
+      <h2><span class="num">3</span> Monthly fees</h2>
       <ul>
-        <li>São cobradas <strong>antecipadamente</strong>, por ciclo mensal, no início de cada período.</li>
-        <li>Não são reembolsáveis <strong>proporcionalmente</strong> a meio do ciclo: o cancelamento tem efeito no <strong>fim do ciclo em curso</strong> e não há novas cobranças a partir daí.</li>
-        <li>Se a conta for suspensa por falha de pagamento, a reactivação pode implicar taxa administrativa, comunicada antes da cobrança.</li>
+        <li>Charged <strong>in advance</strong>, per monthly cycle, at the start of each period.</li>
+        <li>Not refundable <strong>proportionally</strong> mid-cycle: cancellation takes effect at the <strong>end of the current cycle</strong> and no further charges are made from then on.</li>
+        <li>If the account is suspended due to payment failure, reactivation may incur an administrative fee, communicated before charging.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2><span class="num">4</span> Créditos de conversa (mensagens)</h2>
+      <h2><span class="num">4</span> Conversation credits (messages)</h2>
       <ul>
-        <li>Os créditos comprados para envio de mensagens são <strong>bens digitais consumíveis</strong> e não são reembolsáveis após a ativação na conta.</li>
-        <li><strong>Exceção:</strong> créditos ativados por engano, duplicados ou resultantes de erro de cobrança são devolvidos integralmente, em crédito ou reembolso, à tua escolha.</li>
-        <li>Créditos não utilizados podem ser transferidos para outra conta Whatss a teu pedido, sem custo.</li>
+        <li>Credits purchased for sending messages are <strong>consumable digital goods</strong> and are not refundable after activation on the account.</li>
+        <li><strong>Exception:</strong> credits activated by mistake, duplicated or resulting from a billing error are fully refunded, as credit or refund, your choice.</li>
+        <li>Unused credits can be transferred to another Whatss account at your request, free of charge.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2><span class="num">5</span> Casos com e sem direito a reembolso</h2>
+      <h2><span class="num">5</span> Cases with and without refund rights</h2>
       <table>
         <thead>
-          <tr><th>Situação</th><th>Resultado</th><th></th></tr>
+          <tr><th>Situation</th><th>Outcome</th><th></th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>Falha contínua do serviço imputável à Whatss (mais de 72h sem resolução)</td>
-            <td>Reembolso proporcional ao período afetado</td>
-            <td><span class="tag ok">Reembolsável</span></td>
+            <td>Ongoing service failure attributable to Whatss (more than 72h without resolution)</td>
+            <td>Proportional refund for the affected period</td>
+            <td><span class="tag ok">Refundable</span></td>
           </tr>
           <tr>
-            <td>Cobrança duplicada ou valor incorreto</td>
-            <td>Reembolso integral do valor errado</td>
-            <td><span class="tag ok">Reembolsável</span></td>
+            <td>Duplicate or incorrect charge</td>
+            <td>Full refund of the wrong amount</td>
+            <td><span class="tag ok">Refundable</span></td>
           </tr>
           <tr>
-            <td>Cancelamento antes do início da implementação</td>
-            <td>Reembolso integral da taxa de setup</td>
-            <td><span class="tag ok">Reembolsável</span></td>
+            <td>Cancellation before implementation starts</td>
+            <td>Full refund of the setup fee</td>
+            <td><span class="tag ok">Refundable</span></td>
           </tr>
           <tr>
-            <td>Mensalidade após início do ciclo (cancelamento voluntário)</td>
-            <td>Sem reembolso — serviço disponível até ao fim do ciclo</td>
-            <td><span class="tag no">Não reembolsável</span></td>
+            <td>Monthly fee after the cycle starts (voluntary cancellation)</td>
+            <td>No refund — service available until the end of the cycle</td>
+            <td><span class="tag no">Not refundable</span></td>
           </tr>
           <tr>
-            <td>Créditos de conversa já ativados</td>
-            <td>Sem reembolso — bem digital consumível</td>
-            <td><span class="tag no">Não reembolsável</span></td>
+            <td>Already activated conversation credits</td>
+            <td>No refund — consumable digital good</td>
+            <td><span class="tag no">Not refundable</span></td>
           </tr>
           <tr>
-            <td>Insatisfação com funcionalidades da Meta/WhatsApp (fora do nosso controlo)</td>
-            <td>Analisado caso a caso</td>
-            <td><span class="tag maybe">Caso a caso</span></td>
+            <td>Dissatisfaction with Meta/WhatsApp features (outside our control)</td>
+            <td>Reviewed case by case</td>
+            <td><span class="tag maybe">Case by case</span></td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <section class="card">
-      <h2><span class="num">6</span> Como pedir um reembolso</h2>
+      <h2><span class="num">6</span> How to request a refund</h2>
       <ul>
-        <li>Envia um email para <strong>info@hlces.com</strong> com o assunto <strong>“Pedido de Reembolso”</strong>.</li>
-        <li>Inclui: nome, número de WhatsApp registado, descrição do problema, data do pagamento e comprovativo (se disponível).</li>
-        <li>Respondemos a <strong>todos os pedidos em até 7 dias úteis</strong>.</li>
+        <li>Send an email to <strong>info@hlces.com</strong> with the subject <strong>"Refund Request"</strong>.</li>
+        <li>Include: name, registered WhatsApp number, description of the issue, payment date and receipt (if available).</li>
+        <li>We reply to <strong>all requests within 7 business days</strong>.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2><span class="num">7</span> Processamento e prazos</h2>
+      <h2><span class="num">7</span> Processing and deadlines</h2>
       <ul>
-        <li>Pedidos aprovados são devolvidos <strong>no mesmo método de pagamento</strong> utilizado na compra.</li>
-        <li>O valor é creditado em <strong>até 10 dias úteis</strong> após a aprovação.</li>
-        <li>Nos casos em que se aplica ajuste de créditos, o valor é creditado na conta Whatss em <strong>até 3 dias úteis</strong>.</li>
+        <li>Approved requests are returned <strong>via the same payment method</strong> used for the purchase.</li>
+        <li>The amount is credited in <strong>up to 10 business days</strong> after approval.</li>
+        <li>In cases where credit adjustment applies, the amount is credited to the Whatss account in <strong>up to 3 business days</strong>.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2><span class="num">8</span> Ficaste com dúvidas?</h2>
-      <p>Fala connosco antes de decidir — resolvemos a maioria dos casos sem burocracia.</p>
+      <h2><span class="num">8</span> Still have questions?</h2>
+      <p>Talk to us before deciding — we resolve most cases without bureaucracy.</p>
       <div class="contact-box">
         <a class="mail" href="mailto:info@hlces.com">✉️ info@hlces.com</a>
-        <a class="wa" href="https://wa.me/258824463475?text=Olá! Tenho uma dúvida sobre a Política de Reembolso" target="_blank" rel="noopener noreferrer">WhatsApp +258 82 446 3475</a>
+        <a class="wa" href="https://wa.me/258824463475?text=Hello! I have a question about the Refund Policy" target="_blank" rel="noopener noreferrer">WhatsApp +258 82 446 3475</a>
       </div>
     </section>
   </main>
@@ -294,13 +301,14 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-links">
-        <a href="termos.html">Termos</a>
-        <a href="termos.html">Privacidade</a>
-        <a href="reembolso.html">Reembolso</a>
+        <a href="termos.html">Terms</a>
+        <a href="termos.html">Privacy</a>
+        <a href="reembolso.html">Refunds</a>
         <a href="mailto:info@hlces.com">info@hlces.com</a>
-        <a href="https://wa.me/258824463475" target="_blank" rel="noopener noreferrer">Suporte</a>
+        <a href="https://wa.me/258824463475" target="_blank" rel="noopener noreferrer">Support</a>
+        <a href="../reembolso.html">Português</a>
       </div>
-      <span class="copyright">© 2026 Whatss. Todos os direitos reservados.</span>
+      <span class="copyright">© 2026 Whatss. All rights reserved.</span>
     </div>
   </footer>
 
