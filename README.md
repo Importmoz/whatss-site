@@ -5,9 +5,12 @@ Site estático do **Whatss** (API Oficial WhatsApp Business — Moçambique & Br
 ## Estrutura
 
 ```
-├── index.html    → Landing page (página inicial)
-├── termos.html   → Termos de Serviço + Política de Privacidade (com abas)
-└── 404.html      → Página de erro 404 com link para a home
+├── index.html      → Landing page (página inicial)
+├── termos.html     → Termos de Serviço + Política de Privacidade (com abas)
+├── reembolso.html  → Política de Reembolso
+├── 404.html        → Página de erro 404 com link para a home
+├── Dockerfile      → nginx:alpine (deploy Coolify)
+└── nginx.conf      → config nginx (404 custom)
 ```
 
 ## Contactos
@@ -69,6 +72,11 @@ curl -s -o /dev/null -w "%{http_code}" https://whatss.mycloudspaces.com/nao-exis
 |---|---|---|
 | Landing (rodapé) | Termos | `termos.html` |
 | Landing (rodapé) | Privacidade | `termos.html` |
+| Landing (rodapé) | Reembolso | `reembolso.html` |
+| Termos (rodapé) | Reembolso | `reembolso.html` |
+| Reembolso (rodapé) | Termos | `termos.html` |
+| Reembolso (rodapé) | Privacidade | `termos.html` |
+| Reembolso (rodapé) | Home | `index.html` |
 | Termos (cabeçalho e rodapé) | Home | `index.html` |
 | Landing (todos os CTAs) | WhatsApp | `https://wa.me/258824463475?text=...` |
 | Landing (rodapé) | Email | `mailto:info@hlces.com` |

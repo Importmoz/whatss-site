@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Reembolso — Whatss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fafafa;
+      color: #18181b;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.85);
+      border-bottom: 1px solid #f4f4f5;
+    }
+    .header-inner {
+      max-width: 1120px; margin: 0 auto; padding: 0 24px;
+      height: 72px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-logo {
+      width: 36px; height: 36px; border-radius: 11px;
+      background: linear-gradient(135deg, #10b981, #3b82f6);
+      display: grid; place-items: center; color: #fff;
+      font-size: 16px; font-weight: 800;
+      box-shadow: 0 6px 16px -6px rgba(16,185,129,0.5);
+    }
+    .brand-name {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.02em;
+      background: linear-gradient(90deg, #10b981, #3b82f6);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .back-link {
+      font-size: 13px; font-weight: 500; color: #71717a;
+      text-decoration: none; transition: color 0.2s;
+    }
+    .back-link:hover { color: #18181b; }
+    @media (max-width: 640px) { .back-link { display: none; } }
+    /* ── Main ── */
+    main { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; animation: fadeUp 0.5s ease both; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      color: #059669; background: #ecfdf5; border: 1px solid #a7f3d0;
+      padding: 6px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 10px; }
+    .subtitle { font-size: 16px; color: #71717a; line-height: 1.6; margin-bottom: 28px; }
+    .updated {
+      display: inline-block; font-size: 13px; color: #a1a1aa;
+      background: #f4f4f5; border-radius: 999px; padding: 5px 12px; margin-bottom: 36px;
+    }
+    /* ── Cards ── */
+    .card {
+      background: #fff; border: 1px solid #e4e4e7; border-radius: 20px;
+      padding: 28px 30px; margin-bottom: 18px;
+      box-shadow: 0 8px 24px -12px rgba(24,24,27,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 14px 32px -14px rgba(24,24,27,0.12); }
+    .card h2 {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 17px; font-weight: 700; letter-spacing: -0.01em;
+      margin-bottom: 14px; color: #18181b;
+    }
+    .num {
+      flex-shrink: 0; width: 30px; height: 30px; border-radius: 10px;
+      background: linear-gradient(135deg, #10b981, #3b82f6); color: #fff;
+      display: grid; place-items: center; font-size: 13px; font-weight: 700;
+    }
+    .card p { font-size: 14.5px; line-height: 1.7; color: #52525b; margin-bottom: 12px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul { list-style: none; margin: 0; }
+    .card li {
+      position: relative; padding-left: 22px;
+      font-size: 14.5px; line-height: 1.7; color: #52525b; margin-bottom: 10px;
+    }
+    .card li:last-child { margin-bottom: 0; }
+    .card li::before {
+      content: ''; position: absolute; left: 2px; top: 10px;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: linear-gradient(135deg, #10b981, #3b82f6);
+    }
+    .card strong { color: #18181b; font-weight: 600; }
+    /* callout (resumo) */
+    .callout {
+      background: linear-gradient(135deg, #ecfdf5, #eff6ff);
+      border: 1px solid #bbf7d0; border-radius: 20px;
+      padding: 24px 28px; margin-bottom: 18px;
+    }
+    .callout h2 { font-size: 15px; font-weight: 700; color: #065f46; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .callout p { font-size: 14px; line-height: 1.7; color: #3f5f50; }
+    /* tabela casos */
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th {
+      text-align: left; font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+      text-transform: uppercase; color: #71717a; padding: 10px 12px;
+      border-bottom: 2px solid #e4e4e7;
+    }
+    td { padding: 12px; color: #52525b; line-height: 1.6; border-bottom: 1px solid #f4f4f5; vertical-align: top; }
+    td:first-child { font-weight: 600; color: #18181b; white-space: nowrap; }
+    tr:last-child td { border-bottom: none; }
+    .tag {
+      display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.02em;
+      padding: 3px 10px; border-radius: 999px;
+    }
+    .tag.ok { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; }
+    .tag.no { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+    .tag.maybe { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+    .contact-box {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px;
+    }
+    .contact-box a {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13.5px; font-weight: 600; text-decoration: none;
+      padding: 10px 18px; border-radius: 999px; transition: all 0.2s;
+    }
+    .contact-box .mail { background: #18181b; color: #fff; }
+    .contact-box .mail:hover { background: #27272a; transform: translateY(-1px); }
+    .contact-box .wa { background: #25D366; color: #fff; }
+    .contact-box .wa:hover { filter: brightness(0.95); transform: translateY(-1px); }
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #f4f4f5; background: #fff;
+      padding: 28px 24px 40px;
+    }
+    .footer-inner {
+      max-width: 1120px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; }
+    .footer-links a { color: #71717a; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #18181b; }
+    .copyright { font-size: 13px; color: #a1a1aa; }
+    @media (max-width: 640px) {
+      main { padding: 40px 18px 60px; }
+      h1 { font-size: 27px; }
+      .card { padding: 22px 20px; }
+      td:first-child { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">W</span>
+        <span class="brand-name">Whatss</span>
+      </a>
+      <a class="back-link" href="index.html">Voltar para Home →</a>
+    </div>
+  </header>
+
+  <main>
+    <span class="badge">Política de Reembolso</span>
+    <h1>Reembolso: condições claras, sem letras pequenas.</h1>
+    <p class="subtitle">
+      O Whatss é a API oficial do WhatsApp Business para empresas em Moçambique e no Brasil.
+      Esta política define quando e como os valores pagos podem ser devolvidos.
+    </p>
+    <span class="updated">Última atualização: 10 de agosto de 2026</span>
+
+    <div class="callout">
+      <h2>⚡ Resumo rápido</h2>
+      <p>
+        Cobranças <strong>duplicadas ou por engano</strong> são sempre reembolsadas por inteiro. A taxa de
+        implementação é reembolsável <strong>se cancelares antes do início dos trabalhos</strong>. Mensalidades
+        e créditos de conversa não são reembolsáveis após a ativação, salvo falha contínua do serviço
+        imputável à Whatss.
+      </p>
+    </div>
+
+    <section class="card">
+      <h2><span class="num">1</span> A que serviços se aplica</h2>
+      <p>
+        Esta política cobre todos os pagamentos feitos à <strong>HLCES</strong> pelos serviços Whatss:
+        implementação da API oficial do WhatsApp Business, mensalidades de gestão e suporte, e créditos
+        de conversa (mensagens enviadas através da API).
+      </p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">2</span> Taxa de implementação (setup)</h2>
+      <ul>
+        <li>É paga <strong>uma única vez</strong>, antes do início da configuração da conta.</li>
+        <li>É <strong>integralmente reembolsável</strong> se pedires o cancelamento antes de os trabalhos de implementação começarem.</li>
+        <li>Não é reembolsável após o início da implementação, pois envolve trabalho técnico já realizado (configuração da conta, verificação, integração).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">3</span> Mensalidades</h2>
+      <ul>
+        <li>São cobradas <strong>antecipadamente</strong>, por ciclo mensal, no início de cada período.</li>
+        <li>Não são reembolsáveis <strong>proporcionalmente</strong> a meio do ciclo: o cancelamento tem efeito no <strong>fim do ciclo em curso</strong> e não há novas cobranças a partir daí.</li>
+        <li>Se a conta for suspensa por falha de pagamento, a reactivação pode implicar taxa administrativa, comunicada antes da cobrança.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">4</span> Créditos de conversa (mensagens)</h2>
+      <ul>
+        <li>Os créditos comprados para envio de mensagens são <strong>bens digitais consumíveis</strong> e não são reembolsáveis após a ativação na conta.</li>
+        <li><strong>Exceção:</strong> créditos ativados por engano, duplicados ou resultantes de erro de cobrança são devolvidos integralmente, em crédito ou reembolso, à tua escolha.</li>
+        <li>Créditos não utilizados podem ser transferidos para outra conta Whatss a teu pedido, sem custo.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">5</span> Casos com e sem direito a reembolso</h2>
+      <table>
+        <thead>
+          <tr><th>Situação</th><th>Resultado</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Falha contínua do serviço imputável à Whatss (mais de 72h sem resolução)</td>
+            <td>Reembolso proporcional ao período afetado</td>
+            <td><span class="tag ok">Reembolsável</span></td>
+          </tr>
+          <tr>
+            <td>Cobrança duplicada ou valor incorreto</td>
+            <td>Reembolso integral do valor errado</td>
+            <td><span class="tag ok">Reembolsável</span></td>
+          </tr>
+          <tr>
+            <td>Cancelamento antes do início da implementação</td>
+            <td>Reembolso integral da taxa de setup</td>
+            <td><span class="tag ok">Reembolsável</span></td>
+          </tr>
+          <tr>
+            <td>Mensalidade após início do ciclo (cancelamento voluntário)</td>
+            <td>Sem reembolso — serviço disponível até ao fim do ciclo</td>
+            <td><span class="tag no">Não reembolsável</span></td>
+          </tr>
+          <tr>
+            <td>Créditos de conversa já ativados</td>
+            <td>Sem reembolso — bem digital consumível</td>
+            <td><span class="tag no">Não reembolsável</span></td>
+          </tr>
+          <tr>
+            <td>Insatisfação com funcionalidades da Meta/WhatsApp (fora do nosso controlo)</td>
+            <td>Analisado caso a caso</td>
+            <td><span class="tag maybe">Caso a caso</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">6</span> Como pedir um reembolso</h2>
+      <ul>
+        <li>Envia um email para <strong>info@hlces.com</strong> com o assunto <strong>“Pedido de Reembolso”</strong>.</li>
+        <li>Inclui: nome, número de WhatsApp registado, descrição do problema, data do pagamento e comprovativo (se disponível).</li>
+        <li>Respondemos a <strong>todos os pedidos em até 7 dias úteis</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">7</span> Processamento e prazos</h2>
+      <ul>
+        <li>Pedidos aprovados são devolvidos <strong>no mesmo método de pagamento</strong> utilizado na compra.</li>
+        <li>O valor é creditado em <strong>até 10 dias úteis</strong> após a aprovação.</li>
+        <li>Nos casos em que se aplica ajuste de créditos, o valor é creditado na conta Whatss em <strong>até 3 dias úteis</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">8</span> Ficaste com dúvidas?</h2>
+      <p>Fala connosco antes de decidir — resolvemos a maioria dos casos sem burocracia.</p>
+      <div class="contact-box">
+        <a class="mail" href="mailto:info@hlces.com">✉️ info@hlces.com</a>
+        <a class="wa" href="https://wa.me/258824463475?text=Olá! Tenho uma dúvida sobre a Política de Reembolso" target="_blank" rel="noopener noreferrer">WhatsApp +258 82 446 3475</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="termos.html">Termos</a>
+        <a href="termos.html">Privacidade</a>
+        <a href="reembolso.html">Reembolso</a>
+        <a href="mailto:info@hlces.com">info@hlces.com</a>
+        <a href="https://wa.me/258824463475" target="_blank" rel="noopener noreferrer">Suporte</a>
+      </div>
+      <span class="copyright">© 2026 Whatss. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
